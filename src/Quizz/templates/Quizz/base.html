@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -31,4 +32,39 @@
     <script src="{% static 'css/jquery.min.js' %}"></script>
 </body>
 
+=======
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+</head>
+
+<body class="">
+    {% block content %}
+
+    {% endblock content %}
+
+    <div class="container">
+        <footer style="position: fixed;
+        bottom: 0;
+        width: 100%;" class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Acceuil</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Quizz</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+            </ul>
+            <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
+        </footer>
+    </div>
+    <script src="{% static 'css/bootstrap.min.js' %}"></script>
+    <script src="{% static 'css/jquery.min.js' %}"></script>
+</body>
+
+>>>>>>> debdd121a0ae1b44b1acc4613d7d9b75efb8eeb7
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'Quizz/base.html' %}
 {% comment %} Le style du site est temmporaire c'etait juste pour avoir un apercu {% endcomment %}
 {% block content %}
@@ -41,4 +42,49 @@
 </div>
 </div>
 
+=======
+{% extends 'Quizz/base.html' %}
+{% comment %} Le style du site est temmporaire c'etait juste pour avoir un apercu {% endcomment %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container position-relative">
+        <div class="btn position-absolute top-0 start-0"><a href="{% url 'manageQuizz:quizz' %}"><button
+                    class="btn btn-outline-dark">Retour</button></a></div>
+    </div>
+
+</nav>
+<div class="container p-5 m-5">
+    <div class="row">
+        <div class="rounded m-4 col p-lg-5 text-white bg-dark">
+            <h1>{{ qz.title }}</h1>
+            {{ qz.image.url }}
+            <div class="detail">
+                <p>{{ qz.categorie }}</p>
+                <p>{{ qz.niveau }}</p>
+            </div>
+        </div>
+        <div class="bg-dark position-relative rounded-top p-3 text-white col-7">
+            <h1>Description : </h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, sequi?Lorem ipsum, dolor sit amet
+                consectetur
+                adipisicing elit. Odio consequatur cupiditate voluptatibus aliquam, nesciunt harum incidunt omnis natus
+                corporis asperiores!</p>
+                <a href="{% url 'manageQuizz:question' qz.pk %}"><div class="position-absolute me-2 mb-1 btn btn-outline-success bottom-0 end-0"><button
+                    style="border: none;" class="btn btn-outline-success" type="button">Lancer le Quizz</button>
+            </div></a>
+            
+        </div>
+    </div>
+</div>
+<div class="container"><h1>Quizz similaires :</h1>
+<hr>
+
+<br>
+<div class="container shadow-lg p-3 mb-5 bg-body rounded d-flex justify-content-center">
+
+</div>
+</div>
+
+>>>>>>> debdd121a0ae1b44b1acc4613d7d9b75efb8eeb7
 {% endblock content %}

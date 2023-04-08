@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'Quizz/base.html' %}
 {% block content %}
 
@@ -71,4 +72,79 @@
     {% endfor %}
 </div>
 
+=======
+{% extends 'Quizz/base.html' %}
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">QuizzApp</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorie
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><input type="radio" name="categorie" id="">Science</li>
+                        <li><input type="radio" name="categorie" id="">Litterature</li>
+                        <li><input type="radio" name="categorie" id="">Animé</li>
+                        <li><input type="radio" name="categorie" id="">Physique</li>
+
+                    </ul>
+                </div>
+
+            </ul>
+            <form class="d-flex">
+                <input width="80%" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <ul>
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Level
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><input type="radio" name="categorie" id="">Facile</li>
+                        <li><input type="radio" name="categorie" id="">Intermediare</li>
+                        <li><input type="radio" name="categorie" id="">Difficile</li>
+                        <li><input type="radio" name="categorie" id="">Expert</li>
+
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container d-flex col-12">
+    {% for qz in quizz %}
+   
+    <div class="rounded m-4 col-3 p-lg-5 text-white bg-dark">
+        <a href="{% url 'manageQuizz:detail' qz.pk %}">
+        <h1>{{ qz.title }}</h1>
+        {{ qz.image.url }}
+        <div class="detail">
+            <p>{{ qz.categorie }}</p>
+            <p>{{ qz.niveau }}</p>
+        </div>
+    </a>
+    </div>
+    {% endfor %}
+</div>
+
+>>>>>>> debdd121a0ae1b44b1acc4613d7d9b75efb8eeb7
 {% endblock content %}
